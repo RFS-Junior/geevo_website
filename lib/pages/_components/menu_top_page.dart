@@ -19,9 +19,9 @@ class MenuTopPage extends StatelessWidget {
             children: <Widget>[
               _buildMenuButton(context, "HOME", keys[0]),
               _buildMenuButton(context, "PRODUTOS", keys[1]),
-              _buildMenuButton(context, "NOSSOS CLIENTES", keys[2]),
+              _buildMenuButton(context, "CLIENTES", keys[2]),
               _buildMenuButton(context, "SOBRE", keys[3]),
-              _buildMenuButton(context, "NOSSO TIME", keys[4]),
+              _buildMenuButton(context, "TIME", keys[4]),
               _buildMenuButton(context, "CONTATO", keys[5]),
             ],
           ),
