@@ -53,14 +53,14 @@ class Product extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 220,
-      width: 250,
+      height: 230,
+      width: 280,
       padding: const EdgeInsets.all(24.0),
       decoration: BoxDecoration(
         color: Colors.teal[300]!.withOpacity(0.2),
         borderRadius: BorderRadius.circular(40),
         border: Border.all(
-          color: Colors.white,
+          color: Colors.teal,
           width: 1,
         ),
       ),
@@ -77,12 +77,12 @@ class Product extends StatelessWidget {
                     ? TextSpan(
                         text: title,
                         style: const TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                            fontSize: 22, fontWeight: FontWeight.bold),
                       )
                     : TextSpan(
                         text:
                             '${index == 1 ? "\n\n" : ""}${items[index - 1]}\n',
-                        style: const TextStyle(fontSize: 11),
+                        style: const TextStyle(fontSize: 14),
                       ),
               ),
             ),
@@ -91,7 +91,7 @@ class Product extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text("SAIBA MAIS",
-                  style: TextStyle(fontSize: 9, color: Colors.white70)),
+                  style: TextStyle(fontSize: 14, color: Colors.white70)),
               IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.arrow_forward, color: Colors.white))
