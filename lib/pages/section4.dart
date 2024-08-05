@@ -7,7 +7,7 @@ class Section4 extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: size.width * 0.65,
+      width: size.width * 0.6,
       height: size.height,
       child: Row(
         children: [
@@ -57,17 +57,17 @@ class Section4 extends StatelessWidget {
                         TextSpan(
                           text: 'SOBRE A GEEVO',
                           style: TextStyle(
-                              fontSize: 50, fontWeight: FontWeight.bold),
+                              fontSize: 40, fontWeight: FontWeight.bold),
                         ),
                         TextSpan(
                           text:
                               '\n\nSomos uma empresa que respira inovação, juventude e disrupção. Nosso lema é claro: Transformamos a complexidade empresarial em simpliciade criativa, permitindo que você foque no que realmente importa  crescer e inovar.',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(fontSize: 14),
                         ),
                         TextSpan(
                           text:
                               '\n\nNossos serviços vão além do convencional, combinamos produtos de marketing, finanças e gestão de maneira desafiadora. Somos os arquitetos de uma nova era para negócios, moldando futuros com ideias audaciosas e soluções vanguardistas.',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(fontSize: 14),
                         ),
                       ],
                     ),

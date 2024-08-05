@@ -46,7 +46,7 @@ class MenuTopPage extends StatelessWidget {
       child: Text(
         text,
         style: Theme.of(context).textTheme.titleMedium!.copyWith(
-              fontSize: 14,
+              fontSize: 16,
               color: Colors.white,
             ),
       ),

@@ -10,57 +10,77 @@ class Section1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Column(
+    return Stack(
       children: [
-        SizedBox(
-          width: size.width * 0.65,
-          height: size.height * 0.1,
-          child: MenuTopPage(keys: keys),
+        Image.asset(
+          'asset/images/universe.jpg',
+          scale: 1,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          fit: BoxFit.cover,
         ),
-        SizedBox(
-          width: size.width * 0.65,
-          height: size.height * 0.9,
-          child: Row(
+        Center(
+          child: Column(
             children: [
-              Expanded(
-                flex: 3,
-                child: RichText(
-                  text: const TextSpan(
-                    style: TextStyle(
-                      color: Colors.white,
-                      letterSpacing: 1.5,
-                    ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'NÓS\n',
-                        style: TextStyle(fontSize: 50),
-                      ),
-                      TextSpan(
-                        text: 'GERENCIAMOS\n',
-                        style: TextStyle(
-                            fontSize: 50, fontWeight: FontWeight.bold),
-                      ),
-                      TextSpan(
-                        text: 'COMPLEXIDADES\n',
-                        style: TextStyle(fontSize: 50),
-                      ),
-                      TextSpan(
-                        text: 'VOCÊ FOCA NO QUE\n',
-                        style: TextStyle(fontSize: 50),
-                      ),
-                      TextSpan(
-                        text: """                   IMPORTA""",
-                        style: TextStyle(
-                            fontSize: 50, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                ),
+              SizedBox(
+                width: size.width * 0.6,
+                height: size.height * 0.1,
+                child: MenuTopPage(keys: keys),
               ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.red,
+              SizedBox(
+                width: size.width * 0.6,
+                height: size.height * 0.9,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: RichText(
+                        text: const TextSpan(
+                          style: TextStyle(
+                            color: Colors.white,
+                            letterSpacing: 1.5,
+                          ),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: 'NÓS\n',
+                              style: TextStyle(fontSize: 55),
+                            ),
+                            TextSpan(
+                              text: 'GERENCIAMOS\n',
+                              style: TextStyle(
+                                  fontSize: 50, fontWeight: FontWeight.bold),
+                            ),
+                            TextSpan(
+                              text: 'COMPLEXIDADES\n',
+                              style: TextStyle(fontSize: 55),
+                            ),
+                            TextSpan(
+                              text: 'VOCÊ FOCA NO QUE\n',
+                              style: TextStyle(fontSize: 55),
+                            ),
+                            TextSpan(
+                              text: """                    IMPORTA""",
+                              style: TextStyle(
+                                  fontSize: 55, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        color: Colors.red,
+                        child: Image.asset(
+                          'asset/images/figure1.png',
+                          scale: 1,
+                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery.of(context).size.height * 0.8,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

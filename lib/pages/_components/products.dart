@@ -53,7 +53,7 @@ class Product extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 230,
+      height: 220,
       width: 280,
       padding: const EdgeInsets.all(24.0),
       decoration: BoxDecoration(
@@ -67,35 +67,41 @@ class Product extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          RichText(
-            textAlign: TextAlign.left,
-            text: TextSpan(
-              style: const TextStyle(color: Colors.white),
-              children: List.generate(
-                items.length + 1,
-                (int index) => index == 0
-                    ? TextSpan(
-                        text: title,
-                        style: const TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.bold),
-                      )
-                    : TextSpan(
-                        text:
-                            '${index == 1 ? "\n\n" : ""}${items[index - 1]}\n',
-                        style: const TextStyle(fontSize: 14),
-                      ),
+          Expanded(
+            flex: 3,
+            child: RichText(
+              textAlign: TextAlign.left,
+              text: TextSpan(
+                style: const TextStyle(color: Colors.white),
+                children: List.generate(
+                  items.length + 1,
+                  (int index) => index == 0
+                      ? TextSpan(
+                          text: title,
+                          style: const TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        )
+                      : TextSpan(
+                          text:
+                              '${index == 1 ? "\n\n" : ""}${items[index - 1]}\n',
+                          style: const TextStyle(fontSize: 14),
+                        ),
+                ),
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text("SAIBA MAIS",
-                  style: TextStyle(fontSize: 14, color: Colors.white70)),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.arrow_forward, color: Colors.white))
-            ],
+          Expanded(
+            flex: 1,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text("SAIBA MAIS",
+                    style: TextStyle(fontSize: 12, color: Colors.white70)),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_forward, color: Colors.white))
+              ],
+            ),
           ),
         ],
       ),

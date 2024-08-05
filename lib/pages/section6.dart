@@ -7,7 +7,7 @@ class Section6 extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: size.width * 0.65,
+      width: size.width * 0.6,
       height: size.height * 0.3,
       child: Row(
         children: [
@@ -24,10 +24,13 @@ class Section6 extends StatelessWidget {
                   width: 1,
                 ),
               ),
-              child: const Center(
-                child: Text(
-                  "GEEVO",
-                  style: TextStyle(color: Colors.white, fontSize: 40),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Image.asset(
+                    'asset/images/GEEVO-04.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

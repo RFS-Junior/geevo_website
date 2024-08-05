@@ -9,7 +9,7 @@ class Section2 extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: size.width * 0.65,
+      width: size.width * 0.6,
       height: size.height,
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -18,11 +18,11 @@ class Section2 extends StatelessWidget {
             child: ResultsComponent(),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(0, 60, 0, 30),
+            padding: EdgeInsets.symmetric(vertical: 30.0),
             child: Text(
               'PRODUTOS',
               textAlign: TextAlign.left,
-              style: TextStyle(fontSize: 50, color: Colors.white),
+              style: TextStyle(fontSize: 40, color: Colors.white),
             ),
           ),
           Products(),
@@ -40,7 +40,7 @@ class ResultsComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16.0),
+      margin: const EdgeInsets.fromLTRB(0, 12.0, 0, 16.0),
       width: 800,
       height: 200,
       decoration: BoxDecoration(
@@ -68,15 +68,15 @@ class ResultsComponent extends StatelessWidget {
                     TextSpan(
                       text: '+20M',
                       style:
-                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
                       text: '\n\nDE INVESTIMENTOS\n',
-                      style: TextStyle(fontSize: 11),
+                      style: TextStyle(fontSize: 10),
                     ),
                     TextSpan(
                       text: 'ADMINISTRADOS',
-                      style: TextStyle(fontSize: 11),
+                      style: TextStyle(fontSize: 10),
                     ),
                   ],
                 ),
@@ -93,15 +93,15 @@ class ResultsComponent extends StatelessWidget {
                     TextSpan(
                       text: '14',
                       style:
-                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
                       text: '\n\nNICHOS DE MERCADO\n',
-                      style: TextStyle(fontSize: 11),
+                      style: TextStyle(fontSize: 10),
                     ),
                     TextSpan(
                       text: 'ATENDIDOS',
-                      style: TextStyle(fontSize: 11),
+                      style: TextStyle(fontSize: 10),
                     ),
                   ],
                 ),
@@ -118,15 +118,15 @@ class ResultsComponent extends StatelessWidget {
                     TextSpan(
                       text: '+25',
                       style:
-                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
                       text: '\n\nPROJETOS\n',
-                      style: TextStyle(fontSize: 11),
+                      style: TextStyle(fontSize: 10),
                     ),
                     TextSpan(
                       text: 'ACELERADOS',
-                      style: TextStyle(fontSize: 11),
+                      style: TextStyle(fontSize: 10),
                     ),
                   ],
                 ),
