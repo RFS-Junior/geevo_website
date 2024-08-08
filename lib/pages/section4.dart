@@ -15,26 +15,38 @@ class Section4 extends StatelessWidget {
             flex: 2,
             child: Stack(
               children: [
-                Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 310,
-                        margin: const EdgeInsets.all(40.0),
-                        decoration: BoxDecoration(
-                          color: Colors.teal[300]!.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(40),
-                          border: Border.all(
-                            color: Colors.teal,
-                            width: 1,
-                          ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 300,
+                      margin: const EdgeInsets.all(40.0),
+                      decoration: BoxDecoration(
+                        color: Colors.teal[300]!.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(40),
+                        border: Border.all(
+                          color: Colors.teal,
+                          width: 1,
                         ),
                       ),
-                    ],
-                  ),
-                )
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Image.asset(
+                        'asset/images/mão-azulada.png',
+                        scale: 1,
+                        height: 430,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    const SizedBox(height: 220),
+                  ],
+                ),
               ],
             ),
           ),
@@ -112,39 +124,53 @@ class Section4Mobile extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            flex: 3,
+            flex: 1,
             child: Stack(
               children: [
-                Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 310,
-                        margin: const EdgeInsets.all(40.0),
-                        decoration: BoxDecoration(
-                          color: Colors.teal[300]!.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(40),
-                          border: Border.all(
-                            color: Colors.teal,
-                            width: 1,
-                          ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      height: 210,
+                      margin: const EdgeInsets.symmetric(horizontal: 60.0),
+                      decoration: BoxDecoration(
+                        color: Colors.teal[300]!.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(40),
+                        border: Border.all(
+                          color: Colors.teal,
+                          width: 1,
                         ),
                       ),
-                    ],
-                  ),
-                )
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Center(
+                      child: Image.asset(
+                        'asset/images/mão-azulada.png',
+                        scale: 1,
+                        height: 310,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+                  ],
+                ),
               ],
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 1,
             child: Container(
               padding: const EdgeInsets.all(24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   RichText(
                     textAlign: TextAlign.start,

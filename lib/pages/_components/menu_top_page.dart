@@ -12,26 +12,27 @@ class MenuTopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> widgets = [
-      _buildMenuButton(context, "HOME", keys[0], drawer ? true : false),
-      _buildMenuButton(context, "PRODUTOS", keys[1], drawer ? true : false),
-      _buildMenuButton(context, "CLIENTES", keys[2], drawer ? true : false),
-      _buildMenuButton(context, "SOBRE", keys[3], drawer ? true : false),
-      _buildMenuButton(context, "TIME", keys[4], drawer ? true : false),
-      _buildMenuButton(context, "CONTATO", keys[5], drawer ? true : false),
-    ];
+    ListView listView = ListView(
+      shrinkWrap: true,
+      padding: EdgeInsets.zero,
+      scrollDirection: drawer ? Axis.vertical : Axis.horizontal,
+      children: [
+        _buildMenuButton(context, "HOME", keys[0], drawer ? true : false),
+        _buildMenuButton(context, "PRODUTOS", keys[1], drawer ? true : false),
+        _buildMenuButton(context, "CLIENTES", keys[2], drawer ? true : false),
+        _buildMenuButton(context, "SOBRE", keys[3], drawer ? true : false),
+        _buildMenuButton(context, "TIME", keys[4], drawer ? true : false),
+        _buildMenuButton(context, "CONTATO", keys[5], drawer ? true : false),
+      ],
+    );
     return drawer
-        ? Column(
-            children: widgets,
-          )
+        ? listView
         : Row(
             children: [
               Expanded(flex: 1, child: Container()),
               Expanded(
                 flex: 3,
-                child: Row(
-                  children: widgets,
-                ),
+                child: listView,
               ),
               Expanded(flex: 1, child: Container()),
             ],

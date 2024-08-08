@@ -149,9 +149,9 @@ class Section6Mobile extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.all(4.0),
-            margin: const EdgeInsets.all(4.0),
-            height: 100,
-            width: 350,
+            margin: const EdgeInsets.all(12.0),
+            height: 90,
+            width: 340,
             decoration: BoxDecoration(
               color: Colors.teal[300]!.withOpacity(0.2),
               borderRadius: BorderRadius.circular(40),
@@ -162,7 +162,7 @@ class Section6Mobile extends StatelessWidget {
             ),
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Image.asset(
                   'asset/images/GEEVO-04.png',
                   fit: BoxFit.cover,
@@ -180,7 +180,7 @@ class Section6Mobile extends StatelessWidget {
                 const Text(
                   "ACOMPANHE A GENTE:",
                   style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 16,
                       color: Colors.white,
                       fontWeight: FontWeight.bold),
                 ),
@@ -231,20 +231,20 @@ class Section6Mobile extends StatelessWidget {
                       TextSpan(
                         text: 'BELÉM',
                         style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.bold),
+                            fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                       TextSpan(
                         text: '\n\n(91) 99144-0210',
-                        style: TextStyle(fontSize: 8),
+                        style: TextStyle(fontSize: 12),
                       ),
                       TextSpan(
                         text: '\ncontato@geevo.com.br',
-                        style: TextStyle(fontSize: 8),
+                        style: TextStyle(fontSize: 12),
                       ),
                       TextSpan(
                         text:
                             '\n\nAv. Conselheiro Furtado, 1240\n- Sala 203 - Batista Campos,\nBelém - PA, 66025-160',
-                        style: TextStyle(fontSize: 8),
+                        style: TextStyle(fontSize: 12),
                       ),
                     ],
                   ),

@@ -96,21 +96,21 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            rf.ResponsiveBreakpoints.of(context).largerThan(rf.TABLET)
+            !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
                 ? Section1(key: keys[0], keys: keys)
                 : Section1Mobile(
                     key: keys[0], keys: keys, scaffoldKey: scaffoldKey),
-            rf.ResponsiveBreakpoints.of(context).largerThan(rf.TABLET)
+            !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
                 ? Section2(key: keys[1])
                 : Section2Mobile(key: keys[1]),
             Section3(key: keys[2]),
-            rf.ResponsiveBreakpoints.of(context).largerThan(rf.TABLET)
+            !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
                 ? Section4(key: keys[3])
                 : Section4Mobile(key: keys[3]),
-            rf.ResponsiveBreakpoints.of(context).largerThan(rf.TABLET)
+            !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
                 ? Section5(key: keys[4])
                 : Section5Mobile(key: keys[4]),
-            rf.ResponsiveBreakpoints.of(context).largerThan(rf.TABLET)
+            !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
                 ? Section6(key: keys[5])
                 : Section6Mobile(key: keys[5]),
           ],

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '_components/products.dart';
-
 class Section2 extends StatelessWidget {
   const Section2({super.key});
 
@@ -270,7 +268,7 @@ class Section2Mobile extends StatelessWidget {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.all(24),
+            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8.0),
             child: Text(
               'PRODUTOS',
               textAlign: TextAlign.left,
@@ -368,13 +366,13 @@ class Product extends StatelessWidget {
                       ? TextSpan(
                           text: title,
                           style: TextStyle(
-                              fontSize: mobile ? 12 : 18,
+                              fontSize: mobile ? 16 : 18,
                               fontWeight: FontWeight.bold),
                         )
                       : TextSpan(
                           text:
                               '${index == 1 ? "\n\n" : ""}${items[index - 1]}\n',
-                          style: TextStyle(fontSize: mobile ? 8 : 14),
+                          style: TextStyle(fontSize: mobile ? 12 : 14),
                         ),
                 ),
               ),

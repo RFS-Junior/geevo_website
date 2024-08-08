@@ -71,15 +71,12 @@ class Section1 extends StatelessWidget {
                     ),
                     Expanded(
                       flex: 2,
-                      child: Container(
-                        color: Colors.red,
-                        child: Image.asset(
-                          'asset/images/figure1.png',
-                          scale: 1,
-                          width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.height * 0.8,
-                          fit: BoxFit.cover,
-                        ),
+                      child: Image.asset(
+                        'asset/images/imagem-home.png',
+                        scale: 1,
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 0.8,
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ],
@@ -163,15 +160,11 @@ class Section1Mobile extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  color: Colors.red,
-                  child: Image.asset(
-                    'asset/images/figure1.png',
-                    scale: 1,
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.5,
-                    fit: BoxFit.cover,
-                  ),
+                Image.asset(
+                  'asset/images/imagem-home.png',
+                  scale: 1,
+                  height: MediaQuery.of(context).size.height * 0.5,
+                  fit: BoxFit.cover,
                 ),
                 RichText(
                   text: const TextSpan(

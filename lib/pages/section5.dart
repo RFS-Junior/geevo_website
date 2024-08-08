@@ -158,25 +158,27 @@ class Section5Mobile extends StatelessWidget {
             flex: 1,
             child: Container(
               padding: const EdgeInsets.all(12.0),
-              child: RichText(
-                textAlign: TextAlign.start,
-                text: const TextSpan(
-                  style: TextStyle(
-                    color: Colors.white,
-                    letterSpacing: 1.5,
+              child: Center(
+                child: RichText(
+                  textAlign: TextAlign.start,
+                  text: const TextSpan(
+                    style: TextStyle(
+                      color: Colors.white,
+                      letterSpacing: 1.5,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'NOSSO TIME',
+                        style: TextStyle(
+                            fontSize: 32, fontWeight: FontWeight.bold),
+                      ),
+                      TextSpan(
+                        text:
+                            '\n\nNós somos uma familia de inovadores, comprometidos em transformar  a maneira como você faz negócios. Cada membro traz uma combinação única de experiência, criatividade e dedicação, garantindo que oferecemos não apenas  serviços, mas soluções transformadoras.',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ],
                   ),
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: 'NOSSO TIME',
-                      style:
-                          TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-                    ),
-                    TextSpan(
-                      text:
-                          '\n\nNós somos uma familia de inovadores, comprometidos em transformar  a maneira como você faz negócios. Cada membro traz uma combinação única de experiência, criatividade e dedicação, garantindo que oferecemos não apenas  serviços, mas soluções transformadoras.',
-                      style: TextStyle(fontSize: 12),
-                    ),
-                  ],
                 ),
               ),
             ),
@@ -184,6 +186,7 @@ class Section5Mobile extends StatelessWidget {
           Expanded(
             flex: 2,
             child: GridView.count(
+              padding: EdgeInsets.zero,
               physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: 2,
               crossAxisSpacing: 4.0,
@@ -194,7 +197,7 @@ class Section5Mobile extends StatelessWidget {
                   return Container(
                     margin: const EdgeInsets.all(4.0),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         RichText(
                           textAlign: TextAlign.start,
