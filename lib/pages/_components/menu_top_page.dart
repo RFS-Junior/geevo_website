@@ -4,37 +4,46 @@ class MenuTopPage extends StatelessWidget {
   const MenuTopPage({
     super.key,
     required this.keys,
+    required this.drawer,
   });
 
   final List<GlobalKey<State<StatefulWidget>>> keys;
+  final bool drawer;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(flex: 1, child: Container()),
-        Expanded(
-          flex: 3,
-          child: Row(
-            children: <Widget>[
-              _buildMenuButton(context, "HOME", keys[0]),
-              _buildMenuButton(context, "PRODUTOS", keys[1]),
-              _buildMenuButton(context, "CLIENTES", keys[2]),
-              _buildMenuButton(context, "SOBRE", keys[3]),
-              _buildMenuButton(context, "TIME", keys[4]),
-              _buildMenuButton(context, "CONTATO", keys[5]),
+    List<Widget> widgets = [
+      _buildMenuButton(context, "HOME", keys[0], drawer ? true : false),
+      _buildMenuButton(context, "PRODUTOS", keys[1], drawer ? true : false),
+      _buildMenuButton(context, "CLIENTES", keys[2], drawer ? true : false),
+      _buildMenuButton(context, "SOBRE", keys[3], drawer ? true : false),
+      _buildMenuButton(context, "TIME", keys[4], drawer ? true : false),
+      _buildMenuButton(context, "CONTATO", keys[5], drawer ? true : false),
+    ];
+    return drawer
+        ? Column(
+            children: widgets,
+          )
+        : Row(
+            children: [
+              Expanded(flex: 1, child: Container()),
+              Expanded(
+                flex: 3,
+                child: Row(
+                  children: widgets,
+                ),
+              ),
+              Expanded(flex: 1, child: Container()),
             ],
-          ),
-        ),
-        Expanded(flex: 1, child: Container()),
-      ],
-    );
+          );
   }
 
-  Widget _buildMenuButton(BuildContext context, String text, GlobalKey key) {
+  Widget _buildMenuButton(
+      BuildContext context, String text, GlobalKey key, bool drawer) {
     return TextButton(
       onPressed: () async {
         if (key.currentContext != null) {
+          if (drawer) Navigator.pop(context);
           await Scrollable.ensureVisible(
             key.currentContext!,
             duration: const Duration(milliseconds: 600),
@@ -46,9 +55,7 @@ class MenuTopPage extends StatelessWidget {
       child: Text(
         text,
         style: Theme.of(context).textTheme.titleMedium!.copyWith(
-              fontSize: 16,
-              color: Colors.white,
-            ),
+            fontSize: 16, color: drawer ? Colors.black : Colors.white),
       ),
     );
   }
