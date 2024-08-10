@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Section6 extends StatelessWidget {
   const Section6({super.key});
@@ -102,23 +103,26 @@ class Section6 extends StatelessWidget {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: const Icon(
-                              Icons.facebook,
-                              color: Colors.white,
+                            icon: SvgPicture.asset(
+                              "asset/svg/icons8-linked-in.svg",
+                              colorFilter: const ColorFilter.mode(
+                                  Colors.white, BlendMode.srcIn),
                             ),
                           ),
                           IconButton(
                             onPressed: () {},
-                            icon: const Icon(
-                              Icons.facebook,
-                              color: Colors.white,
+                            icon: SvgPicture.asset(
+                              "asset/svg/icons8-facebook.svg",
+                              colorFilter: const ColorFilter.mode(
+                                  Colors.white, BlendMode.srcIn),
                             ),
                           ),
                           IconButton(
                             onPressed: () {},
-                            icon: const Icon(
-                              Icons.facebook,
-                              color: Colors.white,
+                            icon: SvgPicture.asset(
+                              "asset/svg/icons8-instagram.svg",
+                              colorFilter: const ColorFilter.mode(
+                                  Colors.white, BlendMode.srcIn),
                             ),
                           ),
                         ],
@@ -189,23 +193,26 @@ class Section6Mobile extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {},
-                      icon: const Icon(
-                        Icons.facebook,
-                        color: Colors.white,
+                      icon: SvgPicture.asset(
+                        "asset/svg/icons8-linked-in.svg",
+                        colorFilter: const ColorFilter.mode(
+                            Colors.white, BlendMode.srcIn),
                       ),
                     ),
                     IconButton(
                       onPressed: () {},
-                      icon: const Icon(
-                        Icons.facebook,
-                        color: Colors.white,
+                      icon: SvgPicture.asset(
+                        "asset/svg/icons8-facebook.svg",
+                        colorFilter: const ColorFilter.mode(
+                            Colors.white, BlendMode.srcIn),
                       ),
                     ),
                     IconButton(
                       onPressed: () {},
-                      icon: const Icon(
-                        Icons.facebook,
-                        color: Colors.white,
+                      icon: SvgPicture.asset(
+                        "asset/svg/icons8-instagram.svg",
+                        colorFilter: const ColorFilter.mode(
+                            Colors.white, BlendMode.srcIn),
                       ),
                     ),
                   ],

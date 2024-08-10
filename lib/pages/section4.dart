@@ -38,7 +38,7 @@ class Section4 extends StatelessWidget {
                   children: [
                     Center(
                       child: Image.asset(
-                        'asset/images/mão-azulada.png',
+                        'asset/images/mao-azulada.png',
                         scale: 1,
                         height: 430,
                         fit: BoxFit.cover,
@@ -152,7 +152,7 @@ class Section4Mobile extends StatelessWidget {
                   children: [
                     Center(
                       child: Image.asset(
-                        'asset/images/mão-azulada.png',
+                        'asset/images/mao-azulada.png',
                         scale: 1,
                         height: 310,
                         fit: BoxFit.cover,

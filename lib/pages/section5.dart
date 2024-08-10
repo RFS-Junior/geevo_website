@@ -16,9 +16,9 @@ class Section5 extends StatelessWidget {
     List<String> linkedins = ["", "", "", ""];
     List<String> images = [
       "asset/images/steve.png",
-      "asset/images/steve.png",
-      "asset/images/steve.png",
-      "asset/images/steve.png"
+      "asset/images/Lizandra.png",
+      "asset/images/Bruno.png",
+      "asset/images/Hellen.png"
     ];
     return SizedBox(
       width: size.width * 0.65,
@@ -94,7 +94,7 @@ class Section5 extends StatelessWidget {
                           Stack(
                             children: [
                               Container(
-                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                margin: const EdgeInsets.fromLTRB(0, 70, 0, 0),
                                 height: 120,
                                 decoration: BoxDecoration(
                                   color: Colors.teal[300]!.withOpacity(0.2),
@@ -108,7 +108,7 @@ class Section5 extends StatelessWidget {
                               Center(
                                 child: Image.asset(
                                   images[index],
-                                  height: 150,
+                                  height: 190,
                                 ),
                               ),
                             ],
@@ -143,9 +143,9 @@ class Section5Mobile extends StatelessWidget {
     List<String> linkedins = ["", "", "", ""];
     List<String> images = [
       "asset/images/steve.png",
-      "asset/images/steve.png",
-      "asset/images/steve.png",
-      "asset/images/steve.png"
+      "asset/images/Lizandra.png",
+      "asset/images/Bruno.png",
+      "asset/images/Hellen.png"
     ];
     return SizedBox(
       width: size.width,
@@ -222,8 +222,8 @@ class Section5Mobile extends StatelessWidget {
                         Stack(
                           children: [
                             Container(
-                              margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              height: 120,
+                              margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
+                              height: 100,
                               decoration: BoxDecoration(
                                 color: Colors.teal[300]!.withOpacity(0.2),
                                 borderRadius: BorderRadius.circular(40),
@@ -236,7 +236,7 @@ class Section5Mobile extends StatelessWidget {
                             Center(
                               child: Image.asset(
                                 images[index],
-                                height: 150,
+                                height: 160,
                               ),
                             ),
                           ],

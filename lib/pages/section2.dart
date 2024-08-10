@@ -42,7 +42,7 @@ class Section2 extends StatelessWidget {
                             TextSpan(
                               text: '+20M',
                               style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold),
+                                  fontSize: 44, fontWeight: FontWeight.bold),
                             ),
                             TextSpan(
                               text: '\n\nDE INVESTIMENTOS\n',
@@ -67,7 +67,7 @@ class Section2 extends StatelessWidget {
                             TextSpan(
                               text: '14',
                               style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold),
+                                  fontSize: 44, fontWeight: FontWeight.bold),
                             ),
                             TextSpan(
                               text: '\n\nNICHOS DE MERCADO\n',
@@ -92,7 +92,7 @@ class Section2 extends StatelessWidget {
                             TextSpan(
                               text: '+25',
                               style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold),
+                                  fontSize: 44, fontWeight: FontWeight.bold),
                             ),
                             TextSpan(
                               text: '\n\nPROJETOS\n',
