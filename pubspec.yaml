@@ -41,6 +41,7 @@ dependencies:
   seo: ^0.0.7
   go_router: ^14.2.3
   flutter_svg: ^2.0.10+1
+  visibility_detector: ^0.4.0+2
 
 dev_dependencies:
   flutter_test:

@@ -5,25 +5,22 @@ class Section3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
-      decoration: BoxDecoration(
-        color: Colors.teal[300]!.withOpacity(0.25),
-        border: const Border(
+      decoration: const BoxDecoration(
+        color: Color(0xFF264D56),
+        border: Border(
           top: BorderSide(
-            color: Colors.teal,
+            color: Colors.white60,
             width: 1.0,
             style: BorderStyle.solid,
           ),
           bottom: BorderSide(
-            color: Colors.teal,
+            color: Colors.white60,
             width: 1.0,
             style: BorderStyle.solid,
           ),
         ),
       ),
-      width: size.width,
-      height: size.height * 0.4,
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

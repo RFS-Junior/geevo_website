@@ -6,157 +6,158 @@ class Section2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
-      width: size.width * 0.65,
-      height: size.height,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Center(
-            child: Container(
-              margin: const EdgeInsets.fromLTRB(0, 12.0, 0, 16.0),
-              width: 800,
-              height: 200,
-              decoration: BoxDecoration(
-                color: Colors.teal[300]!.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: Colors.teal,
-                  width: 1,
+    return Center(
+      child: SizedBox(
+        width: size.width * 0.65,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: Container(
+                margin: const EdgeInsets.fromLTRB(0, 12.0, 0, 16.0),
+                width: 800,
+                height: 200,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF264D56).withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: const Color(0xFF264D56),
+                    width: 1,
+                  ),
                 ),
-              ),
-              child: Center(
-                child: SizedBox(
-                  width: 500,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      RichText(
-                        textAlign: TextAlign.center,
-                        text: const TextSpan(
-                          style: TextStyle(
-                            color: Colors.white,
-                            letterSpacing: 1.5,
+                child: Center(
+                  child: SizedBox(
+                    width: 500,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        RichText(
+                          textAlign: TextAlign.center,
+                          text: const TextSpan(
+                            style: TextStyle(
+                              color: Colors.white,
+                              letterSpacing: 1.5,
+                            ),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: '+20M',
+                                style: TextStyle(
+                                    fontSize: 42, fontWeight: FontWeight.bold),
+                              ),
+                              TextSpan(
+                                text: '\n\nDE INVESTIMENTOS\n',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                              TextSpan(
+                                text: 'ADMINISTRADOS',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                            ],
                           ),
-                          children: <TextSpan>[
-                            TextSpan(
-                              text: '+20M',
-                              style: TextStyle(
-                                  fontSize: 44, fontWeight: FontWeight.bold),
-                            ),
-                            TextSpan(
-                              text: '\n\nDE INVESTIMENTOS\n',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                            TextSpan(
-                              text: 'ADMINISTRADOS',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ],
                         ),
-                      ),
-                      Container(height: 60, width: 2, color: Colors.white),
-                      RichText(
-                        textAlign: TextAlign.center,
-                        text: const TextSpan(
-                          style: TextStyle(
-                            color: Colors.white,
-                            letterSpacing: 1.5,
+                        Container(height: 60, width: 2, color: Colors.white),
+                        RichText(
+                          textAlign: TextAlign.center,
+                          text: const TextSpan(
+                            style: TextStyle(
+                              color: Colors.white,
+                              letterSpacing: 1.5,
+                            ),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: '14',
+                                style: TextStyle(
+                                    fontSize: 42, fontWeight: FontWeight.bold),
+                              ),
+                              TextSpan(
+                                text: '\n\nNICHOS DE MERCADO\n',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                              TextSpan(
+                                text: 'ATENDIDOS',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                            ],
                           ),
-                          children: <TextSpan>[
-                            TextSpan(
-                              text: '14',
-                              style: TextStyle(
-                                  fontSize: 44, fontWeight: FontWeight.bold),
-                            ),
-                            TextSpan(
-                              text: '\n\nNICHOS DE MERCADO\n',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                            TextSpan(
-                              text: 'ATENDIDOS',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ],
                         ),
-                      ),
-                      Container(height: 60, width: 2, color: Colors.white),
-                      RichText(
-                        textAlign: TextAlign.center,
-                        text: const TextSpan(
-                          style: TextStyle(
-                            color: Colors.white,
-                            letterSpacing: 1.5,
+                        Container(height: 60, width: 2, color: Colors.white),
+                        RichText(
+                          textAlign: TextAlign.center,
+                          text: const TextSpan(
+                            style: TextStyle(
+                              color: Colors.white,
+                              letterSpacing: 1.5,
+                            ),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: '+25',
+                                style: TextStyle(
+                                    fontSize: 42, fontWeight: FontWeight.bold),
+                              ),
+                              TextSpan(
+                                text: '\n\nPROJETOS\n',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                              TextSpan(
+                                text: 'ACELERADOS',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                            ],
                           ),
-                          children: <TextSpan>[
-                            TextSpan(
-                              text: '+25',
-                              style: TextStyle(
-                                  fontSize: 44, fontWeight: FontWeight.bold),
-                            ),
-                            TextSpan(
-                              text: '\n\nPROJETOS\n',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                            TextSpan(
-                              text: 'ACELERADOS',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ],
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 30.0),
-            child: Text(
-              'PRODUTOS',
-              textAlign: TextAlign.left,
-              style: TextStyle(fontSize: 40, color: Colors.white),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 30.0),
+              child: Text(
+                'PRODUTOS',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontSize: 40, color: Colors.white),
+              ),
             ),
-          ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Product(
-                title: "FINANCAS ÁGEIS",
-                items: [
-                  " Contas a Pagar e Receber",
-                  " Planejamento Financeiro",
-                  " Auditoria e Compliance",
-                  " Relatórios",
-                  " Consultoria Financeira",
-                ],
-                mobile: false,
-              ),
-              Product(
-                title: "MARCA",
-                items: [
-                  " Branding",
-                  " Identidade Visual",
-                  " Design Outsourcing",
-                  " Web Design",
-                  " Gestão de Mídias Sociais",
-                ],
-                mobile: false,
-              ),
-              Product(
-                title: "GESTÃO INTELIGENTE",
-                items: [
-                  " Implementação de Sistemas",
-                  " Mapeamento de Processos",
-                  " Criação de Manuais",
-                  " Treinamento de Equipes",
-                ],
-                mobile: false,
-              ),
-            ],
-          ),
-        ],
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Product(
+                  title: "FINANCAS ÁGEIS",
+                  items: [
+                    " Contas a Pagar e Receber",
+                    " Planejamento Financeiro",
+                    " Auditoria e Compliance",
+                    " Relatórios",
+                    " Consultoria Financeira",
+                  ],
+                  mobile: false,
+                ),
+                Product(
+                  title: "MARCA",
+                  items: [
+                    " Branding",
+                    " Identidade Visual",
+                    " Design Outsourcing",
+                    " Web Design",
+                    " Gestão de Mídias Sociais",
+                  ],
+                  mobile: false,
+                ),
+                Product(
+                  title: "GESTÃO INTELIGENTE",
+                  items: [
+                    " Implementação de Sistemas",
+                    " Mapeamento de Processos",
+                    " Criação de Manuais",
+                    " Treinamento de Equipes",
+                  ],
+                  mobile: false,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -179,10 +180,10 @@ class Section2Mobile extends StatelessWidget {
               margin: const EdgeInsets.all(12.0),
               height: 200,
               decoration: BoxDecoration(
-                color: Colors.teal[300]!.withOpacity(0.2),
+                color: const Color(0xFF264D56).withOpacity(0.2),
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(
-                  color: Colors.teal,
+                  color: const Color(0xFF264D56),
                   width: 1,
                 ),
               ),
@@ -340,14 +341,14 @@ class Product extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: mobile ? 150 : 220,
+      height: mobile ? 150 : 200,
       width: 250,
       padding: const EdgeInsets.all(24.0),
       decoration: BoxDecoration(
-        color: Colors.teal[300]!.withOpacity(0.2),
+        color: const Color(0xFF264D56).withOpacity(0.2),
         borderRadius: BorderRadius.circular(40),
         border: Border.all(
-          color: Colors.teal,
+          color: const Color(0xFF264D56),
           width: 1,
         ),
       ),
@@ -365,14 +366,13 @@ class Product extends StatelessWidget {
                   (int index) => index == 0
                       ? TextSpan(
                           text: title,
-                          style: TextStyle(
-                              fontSize: mobile ? 16 : 18,
-                              fontWeight: FontWeight.bold),
+                          style: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
                         )
                       : TextSpan(
                           text:
                               '${index == 1 ? "\n\n" : ""}${items[index - 1]}\n',
-                          style: TextStyle(fontSize: mobile ? 12 : 14),
+                          style: const TextStyle(fontSize: 12),
                         ),
                 ),
               ),

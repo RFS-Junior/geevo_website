@@ -4,6 +4,7 @@ import 'package:geevo_website/pages/_components/menu_top_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_framework/responsive_framework.dart' as rf;
 import 'package:seo/seo.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 import 'pages/section1.dart';
 import 'pages/section2.dart';
@@ -68,13 +69,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int indexBackground = 0;
+
   @override
   Widget build(BuildContext context) {
     final List<GlobalKey<State<StatefulWidget>>> keys =
         List.generate(6, (index) => GlobalKey<State<StatefulWidget>>());
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black87,
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -93,43 +95,71 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            SizedBox(
+      body: Stack(
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: Image.asset(
+              'asset/images/universe.jpg',
+              scale: 1,
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 1.05,
-              child: Image.asset(
-                'asset/images/universe.jpg',
-                scale: 1,
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 1.05,
-                fit: BoxFit.cover,
-              ),
+              height: MediaQuery.of(context).size.height,
+              fit: BoxFit.cover,
             ),
-            Column(
+          ),
+          SingleChildScrollView(
+            child: Column(
               children: <Widget>[
                 !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
                     ? Section1(key: keys[0], keys: keys)
                     : Section1Mobile(
                         key: keys[0], keys: keys, scaffoldKey: scaffoldKey),
-                !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
-                    ? Section2(key: keys[1])
-                    : Section2Mobile(key: keys[1]),
-                Section3(key: keys[2]),
-                !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
-                    ? Section4(key: keys[3])
-                    : Section4Mobile(key: keys[3]),
-                !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
-                    ? Section5(key: keys[4])
-                    : Section5Mobile(key: keys[4]),
-                !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
-                    ? Section6(key: keys[5])
-                    : Section6Mobile(key: keys[5]),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  color: Colors.grey[900],
+                  child: !rf.ResponsiveBreakpoints.of(context)
+                          .smallerThan(rf.TABLET)
+                      ? Section2(key: keys[1])
+                      : Section2Mobile(key: keys[1]),
+                ),
+                SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    child: Section3(key: keys[2])),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 60),
+                  color: Colors.grey[900],
+                  child: !rf.ResponsiveBreakpoints.of(context)
+                          .smallerThan(rf.TABLET)
+                      ? Section4(key: keys[3])
+                      : Section4Mobile(key: keys[3]),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  color: Colors.grey[900],
+                  child: !rf.ResponsiveBreakpoints.of(context)
+                          .smallerThan(rf.TABLET)
+                      ? Section5(key: keys[4])
+                      : Section5Mobile(key: keys[4]),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  color: Colors.grey[900],
+                  child: !rf.ResponsiveBreakpoints.of(context)
+                          .smallerThan(rf.TABLET)
+                      ? Section6(key: keys[5])
+                      : Section6Mobile(key: keys[5]),
+                ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
