@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Section6 extends StatelessWidget {
   const Section6({super.key});
+
+  Future<void> _launchUrl(Uri url) async {
+    await launchUrl(url);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +108,8 @@ class Section6 extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () => _launchUrl(Uri.parse(
+                                  "https://www.linkedin.com/company/geevoservicos/")),
                               icon: SvgPicture.asset(
                                 "asset/svg/icons8-linked-in.svg",
                                 colorFilter: const ColorFilter.mode(
@@ -111,7 +117,8 @@ class Section6 extends StatelessWidget {
                               ),
                             ),
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () => _launchUrl(Uri.parse(
+                                  "https://www.linkedin.com/company/geevoservicos/")),
                               icon: SvgPicture.asset(
                                 "asset/svg/icons8-facebook.svg",
                                 colorFilter: const ColorFilter.mode(
@@ -119,7 +126,8 @@ class Section6 extends StatelessWidget {
                               ),
                             ),
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () => _launchUrl(Uri.parse(
+                                  "https://www.instagram.com/geevoservicos/")),
                               icon: SvgPicture.asset(
                                 "asset/svg/icons8-instagram.svg",
                                 colorFilter: const ColorFilter.mode(
@@ -143,6 +151,10 @@ class Section6 extends StatelessWidget {
 
 class Section6Mobile extends StatelessWidget {
   const Section6Mobile({super.key});
+
+  Future<void> _launchUrl(Uri url) async {
+    await launchUrl(url);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -193,7 +205,8 @@ class Section6Mobile extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () => _launchUrl(Uri.parse(
+                          "https://www.linkedin.com/company/geevoservicos/")),
                       icon: SvgPicture.asset(
                         "asset/svg/icons8-linked-in.svg",
                         colorFilter: const ColorFilter.mode(
@@ -201,7 +214,8 @@ class Section6Mobile extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () => _launchUrl(Uri.parse(
+                          "https://www.linkedin.com/company/geevoservicos/")),
                       icon: SvgPicture.asset(
                         "asset/svg/icons8-facebook.svg",
                         colorFilter: const ColorFilter.mode(
@@ -209,7 +223,8 @@ class Section6Mobile extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () => _launchUrl(Uri.parse(
+                          "https://www.instagram.com/geevoservicos/")),
                       icon: SvgPicture.asset(
                         "asset/svg/icons8-instagram.svg",
                         colorFilter: const ColorFilter.mode(

@@ -34,7 +34,13 @@ class MenuTopPage extends StatelessWidget {
                 flex: 3,
                 child: listView,
               ),
-              Expanded(flex: 1, child: Container()),
+              Expanded(
+                flex: 1,
+                child: Image.asset(
+                  'asset/images/GEEVO-04.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
             ],
           );
   }

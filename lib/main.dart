@@ -4,7 +4,6 @@ import 'package:geevo_website/pages/_components/menu_top_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_framework/responsive_framework.dart' as rf;
 import 'package:seo/seo.dart';
-import 'package:visibility_detector/visibility_detector.dart';
 
 import 'pages/section1.dart';
 import 'pages/section2.dart';
@@ -69,12 +68,31 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final ScrollController _backgroundScrollController = ScrollController();
+  final ScrollController _contentScrollController = ScrollController();
   int indexBackground = 0;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _contentScrollController.addListener(() {
+      _backgroundScrollController.jumpTo(_contentScrollController.offset / 3);
+    });
+  }
+
+  @override
+  void dispose() {
+    _backgroundScrollController.dispose();
+    _contentScrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     final List<GlobalKey<State<StatefulWidget>>> keys =
         List.generate(6, (index) => GlobalKey<State<StatefulWidget>>());
+
     return Scaffold(
       key: scaffoldKey,
       endDrawer: Drawer(
@@ -97,18 +115,47 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Stack(
         children: [
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            child: Image.asset(
-              'asset/images/universe.jpg',
-              scale: 1,
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              fit: BoxFit.cover,
+          NotificationListener<ScrollNotification>(
+            onNotification: (ScrollNotification scrollInfo) {
+              if (scrollInfo is ScrollUpdateNotification) {
+                _backgroundScrollController
+                    .jumpTo(_contentScrollController.offset / 3);
+              }
+              return true;
+            },
+            child: SingleChildScrollView(
+              controller: _backgroundScrollController,
+              physics: const NeverScrollableScrollPhysics(),
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height,
+                    child: Image.asset(
+                      'asset/images/universe.jpg',
+                      scale: 1,
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height,
+                    child: Image.asset(
+                      'asset/images/background5.jpg',
+                      scale: 1,
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           SingleChildScrollView(
+            controller: _contentScrollController,
             child: Column(
               children: <Widget>[
                 !rf.ResponsiveBreakpoints.of(context).smallerThan(rf.TABLET)
@@ -125,13 +172,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       : Section2Mobile(key: keys[1]),
                 ),
                 SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.4,
-                    child: Section3(key: keys[2])),
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.4,
+                  child: Section3(key: keys[2]),
+                ),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height,
-                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 60),
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 50),
                   color: Colors.grey[900],
                   child: !rf.ResponsiveBreakpoints.of(context)
                           .smallerThan(rf.TABLET)
@@ -149,7 +197,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.25,
                   color: Colors.grey[900],
                   child: !rf.ResponsiveBreakpoints.of(context)
                           .smallerThan(rf.TABLET)

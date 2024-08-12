@@ -26,37 +26,64 @@ class Section1 extends StatelessWidget {
             children: [
               Expanded(
                 flex: 3,
-                child: RichText(
-                  text: const TextSpan(
-                    style: TextStyle(
-                      color: Colors.white,
-                      letterSpacing: 1.5,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    RichText(
+                      text: const TextSpan(
+                        style: TextStyle(
+                          color: Colors.white,
+                          letterSpacing: 1.5,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'NÓS\n',
+                            style: TextStyle(fontSize: 45),
+                          ),
+                          TextSpan(
+                            text: 'GERENCIAMOS\n',
+                            style: TextStyle(
+                                fontSize: 45, fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text: 'COMPLEXIDADES\n',
+                            style: TextStyle(fontSize: 45),
+                          ),
+                          TextSpan(
+                            text: 'VOCÊ FOCA NO QUE\n',
+                            style: TextStyle(fontSize: 45),
+                          ),
+                          TextSpan(
+                            text: """                   IMPORTA""",
+                            style: TextStyle(
+                                fontSize: 45, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
                     ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'NÓS\n',
-                        style: TextStyle(fontSize: 45),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 36.0),
+                      child: TextButton.icon(
+                        iconAlignment: IconAlignment.end,
+                        style: TextButton.styleFrom(
+                            side:
+                                const BorderSide(color: Colors.white, width: 2),
+                            backgroundColor:
+                                const Color(0xFF264D56).withOpacity(0.2)),
+                        onPressed: () {},
+                        label: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              "VAMOS DESCOMPLICAR O\nSEU NEGÓCIO JUNTOS?",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white)),
+                        ),
+                        icon: const Icon(Icons.arrow_forward,
+                            color: Colors.white),
                       ),
-                      TextSpan(
-                        text: 'GERENCIAMOS\n',
-                        style: TextStyle(
-                            fontSize: 45, fontWeight: FontWeight.bold),
-                      ),
-                      TextSpan(
-                        text: 'COMPLEXIDADES\n',
-                        style: TextStyle(fontSize: 45),
-                      ),
-                      TextSpan(
-                        text: 'VOCÊ FOCA NO QUE\n',
-                        style: TextStyle(fontSize: 45),
-                      ),
-                      TextSpan(
-                        text: """                   IMPORTA""",
-                        style: TextStyle(
-                            fontSize: 45, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               Expanded(
@@ -149,7 +176,7 @@ class Section1Mobile extends StatelessWidget {
                 Image.asset(
                   'asset/images/forma-fluida.png',
                   scale: 1,
-                  height: MediaQuery.of(context).size.height * 0.5,
+                  height: MediaQuery.of(context).size.height * 0.45,
                   fit: BoxFit.cover,
                 ),
                 RichText(
@@ -182,6 +209,23 @@ class Section1Mobile extends StatelessWidget {
                             fontSize: 32, fontWeight: FontWeight.bold),
                       ),
                     ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: TextButton.icon(
+                    iconAlignment: IconAlignment.end,
+                    style: TextButton.styleFrom(
+                        side: const BorderSide(color: Colors.white, width: 2),
+                        backgroundColor:
+                            const Color(0xFF264D56).withOpacity(0.2)),
+                    onPressed: () {},
+                    label: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text("VAMOS DESCOMPLICAR O\nSEU NEGÓCIO JUNTOS?",
+                          style: TextStyle(fontSize: 10, color: Colors.white)),
+                    ),
+                    icon: const Icon(Icons.arrow_forward, color: Colors.white),
                   ),
                 ),
               ],
