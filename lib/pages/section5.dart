@@ -15,7 +15,7 @@ class Section5 extends StatelessWidget {
     List<String> positions = ["CMO", "CFO", "CM", "COO"];
     List<String> linkedins = ["", "", "", ""];
     List<String> images = [
-      "asset/images/steve.png",
+      "asset/images/Ernany.png",
       "asset/images/Lizandra.png",
       "asset/images/Bruno.png",
       "asset/images/Hellen.png"
@@ -150,7 +150,7 @@ class Section5Mobile extends StatelessWidget {
     List<String> positions = ["CMO", "CFO", "CM", "COO"];
     List<String> linkedins = ["", "", "", ""];
     List<String> images = [
-      "asset/images/steve.png",
+      "asset/images/Ernany.png",
       "asset/images/Lizandra.png",
       "asset/images/Bruno.png",
       "asset/images/Hellen.png"
